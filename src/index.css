@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Poppins:wght@500&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+ font-family: 'Poppins',sans-serif;
+}
+@keyframes colorChange {
+    0% {
+      color: #6A0DAD; /* Dark Purple */
+    }
+    12.5% {
+      color: #001F54; /* Deep Blue */
+    }
+    25% {
+      color: #004D40; /* Teal */
+    }
+    37.5% {
+      color: #8B0000; /* Dark Red */
+    }
+    50% {
+      color: #013220; /* Dark Green */
+    }
+    62.5% {
+      color: #086F83; /* Dark Cyan */
+    }
+    75% {
+      color: #36454F; /* Charcoal */
+    }
+    87.5% {
+      color: #BF360C; /* Deep Orange */
+    }
+    100% {
+      color: #8B008B; /* Dark Magenta */
+    }
+  }
+  
+  .animated-text {
+    animation: colorChange 6s infinite; /* 6-second cycle */
+  }
+  
