@@ -1,7 +1,6 @@
-import React from 'react'
-import pic from '../../public/FrontImage.webp';
-import Tilt from 'react-parallax-tilt'
-
+import React from "react";
+import GitHubCalendar from "react-github-calendar";
+import Tilt from "react-parallax-tilt";
 import { FaSquareFacebook } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
 import { IoLogoYoutube } from "react-icons/io";
@@ -13,12 +12,12 @@ import { FaNodeJs } from "react-icons/fa6";
 import { ReactTyped } from "react-typed";
 import { FaGithub } from "react-icons/fa";
 
-
-function Home() {
+const Home = () => {
     return (
         <>
             <div className="main-content max-w-screen-2xl container mx-auto px-4 md:px-20 my-20">
                 <div className="flex flex-col md:flex-row">
+                    {/* Left Content */}
                     <div className="md:w-1/2 mt-12 md:mt-24 space-y-2 order-2 md:order-1">
                         <span className="text-xl">Welcome In My Feed</span>
                         <div className="flex space-x-1 text-2xl md:text-4xl">
@@ -40,7 +39,6 @@ function Home() {
                             <span className="animated-text font-extrabold text-lg"> full-stack developer</span>,
                             I bring expertise in building responsive frontends and robust backends, ensuring functionality, performance, and user satisfaction. With a passion for problem-solving, I turn complex concepts into innovative, user-friendly solutions.
                         </p>
-
 
                         {/* Social Media Icons */}
                         <div className="flex flex-col md:flex-row justify-between items-center space-y-10 md:space-y-0">
@@ -65,7 +63,7 @@ function Home() {
                                     </li>
                                     <li>
                                         <a href="https://www.instagram.com/" target="blank">
-                                            <FaInstagramSquare className="text-3xl md:text-5xl text-pink-500  cursor-pointer hover:scale-110 duration-200" />
+                                            <FaInstagramSquare className="text-3xl md:text-5xl text-pink-500 cursor-pointer hover:scale-110 duration-200" />
                                         </a>
                                     </li>
                                     <li>
@@ -87,25 +85,49 @@ function Home() {
                                 </div>
                             </div>
                         </div>
-
-
-
                     </div>
 
                     {/* Profile Picture */}
                     <div className="flex justify-center items-center md:w-1/2 md:ml-48 md:mt-20 mt-8 order-1">
                         <Tilt>
                             <img
-                                src={pic}
+                                src="/FrontImage.webp" // Direct path to public folder
                                 className="rounded-full md:w-[450px] md:h-[450px]"
                                 alt="Profile"
                             />
                         </Tilt>
                     </div>
                 </div>
+
+                {/* GitHub Contributions Section */}
+                <h2 className="text-4xl font-bold text-center mb-8 text-purple-700">
+                    My GitHub Contributions
+                </h2>
+                <div className="bg-gray-800 p-10 rounded-xl shadow-lg my-10 mx-auto max-w-8xl">
+                    <div className="flex justify-center text-white">
+                        <GitHubCalendar
+                            username="vineet9310" // Replace with your GitHub username
+                            blockSize={18} // Increased block size for better visibility
+                            blockMargin={6} // Adjusted margin for better spacing
+                            color="#9b5de5" // Purple theme for better contrast
+                            fontSize={16} // Labels are clearly visible
+                        />
+                    </div>
+                    <p className="text-center text-gray-400 mt-8">
+                        Data powered by{" "}
+                        <a
+                            href="https://github.com/vineet9310"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-blue-500 hover:underline"
+                        >
+                            GitHub
+                        </a>.
+                    </p>
+                </div>
             </div>
         </>
     );
-}
+};
 
 export default Home;
