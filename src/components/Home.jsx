@@ -100,8 +100,8 @@ const Home = () => {
                 </div>
 
                 {/* GitHub Contributions Section */}
-                <h2 className="text-4xl font-bold text-center mb-8 text-purple-700">
-                    My GitHub Contributions
+                <h2 className="text-4xl font-bold text-center  mt-8 mb-8 text-black-700">
+                    My <span className="text-purple-600 text-4xl">GitHub</span> Contributions
                 </h2>
                 <div className="bg-gray-800 p-10 rounded-xl shadow-lg my-10 mx-auto max-w-8xl">
                     <div className="flex justify-center text-white">
@@ -109,7 +109,7 @@ const Home = () => {
                             username="vineet9310" // Replace with your GitHub username
                             blockSize={18} // Increased block size for better visibility
                             blockMargin={6} // Adjusted margin for better spacing
-                            color="#9b5de5" // Purple theme for better contrast
+                            color="#c084f5" // Purple theme for better contrast
                             fontSize={16} // Labels are clearly visible
                         />
                     </div>

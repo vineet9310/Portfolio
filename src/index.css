@@ -39,14 +39,6 @@ body{
   .animated-text {
     animation: colorChange 6s infinite; /* 6-second cycle */
   }
-  @import "github-calendar/dist/github-calendar-responsive.css";
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
+  
   
   
