@@ -49,5 +49,10 @@ app.get('/api/queries', async (req, res) => {
   }
 });
 
+// Default Route for Testing
+app.get("/", (req, res) => {
+  res.send("Backend is running!");
+});
+
 // Start Server
 app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
