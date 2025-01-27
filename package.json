@@ -9,13 +9,10 @@
     "preview": "vite preview",
     "lint": "eslint .",
     "start-backend": "node backend.js",
-    "dev-backend": "nodemon backend.js"
+    "dev-backend": "nodemon server.js"
   },
   "dependencies": {
     "body-parser": "^1.20.3",
-    "cors": "^2.8.5",
-    "dotenv": "^16.4.7",
-    "express": "^4.21.2",
     "github-calendar": "^2.3.4",
     "mongoose": "^8.9.5",
     "react": "^18.3.1",
@@ -37,7 +34,6 @@
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.16",
     "globals": "^15.14.0",
-    "nodemon": "^3.1.9",
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.17",
     "vite": "^6.0.5"

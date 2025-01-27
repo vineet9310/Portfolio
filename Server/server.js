@@ -39,5 +39,15 @@ app.post('/api/queries', async (req, res) => {
   }
 });
 
+// API Endpoint to Get All Queries
+app.get('/api/queries', async (req, res) => {
+  try {
+    const queries = await Query.find(); // Fetch all queries from the database
+    res.status(200).json(queries);
+  } catch (error) {
+    res.status(500).json({ error: 'Failed to fetch queries.' });
+  }
+});
+
 // Start Server
 app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
