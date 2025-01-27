@@ -19,8 +19,8 @@ const Home = () => {
                 <div className="flex flex-col md:flex-row">
                     {/* Left Content */}
                     <div className="md:w-1/2 mt-12 md:mt-24 space-y-2 order-2 md:order-1">
-                        <span className="text-xl">Welcome To My Feed</span>
-                        <div className="flex space-x-1 text-2xl md:text-4xl">
+                        <span className="text-lg md:text-3xl">Welcome To My Feed</span>
+                        <div className="flex space-x-1 text-sm md:text-3xl">
                             <h1>Hello, I'm a</h1>
                             <ReactTyped
                                 className="font-bold"
@@ -34,7 +34,7 @@ const Home = () => {
                                 loop={true}
                             />
                         </div>
-                        <p className="text-lg md:text-md text-justify">
+                        <p className="text-sm md:text-xl text-justify">
                             Transforming ideas into reality, I specialize in crafting seamless digital experiences through clean, efficient, and scalable code. As a
                             <span className="animated-text font-extrabold text-lg"> full-stack developer</span>,
                             I bring expertise in building responsive frontends and robust backends, ensuring functionality, performance, and user satisfaction. With a passion for problem-solving, I turn complex concepts into innovative, user-friendly solutions.
@@ -44,7 +44,7 @@ const Home = () => {
                         <div className="flex flex-col md:flex-row justify-between items-center space-y-10 md:space-y-0">
                             {/* Available On Section */}
                             <div className="space-y-5 text-center md:text-left">
-                                <h1 className="font-bold text-lg md:text-xl">Available on</h1>
+                                <h1 className="font-bold text-sm md:text-xl">Available on</h1>
                                 <ul className="flex flex-wrap justify-center md:justify-start gap-3">
                                     <li>
                                         <a href="https://www.facebook.com/" target="blank">
@@ -76,7 +76,7 @@ const Home = () => {
 
                             {/* Currently Working On Section */}
                             <div className="space-y-5 text-center md:text-right">
-                                <h1 className="font-bold text-lg md:text-xl">Currently working on</h1>
+                                <h1 className="font-bold text-sm md:text-xl">Currently working on</h1>
                                 <div className="flex flex-wrap justify-center md:justify-end gap-3">
                                     <SiMongodb className="text-4xl md:text-5xl text-green-500 hover:scale-110 duration-200 rounded-full border-2 border-gray-300" />
                                     <SiExpress className="text-4xl md:text-5xl text-gray-500 hover:scale-110 duration-200 rounded-full border-2 border-gray-300" />
@@ -100,8 +100,8 @@ const Home = () => {
                 </div>
 
                 {/* GitHub Contributions Section */}
-                <h2 className="text-4xl font-bold text-center  mt-8 mb-8 text-black-700">
-                    My <span className="text-purple-600 text-4xl">GitHub</span> Contributions
+                <h2 className="text-lg md:text-4xl font-bold text-center  mt-8 mb-8 text-black-700">
+                    My <span className="text-purple-600 text-lg md:text-4xl">GitHub</span> Contributions
                 </h2>
                 <div className="bg-gray-800 p-10 rounded-xl shadow-lg my-10 mx-auto max-w-8xl">
                     <div className="flex justify-center text-white">
@@ -113,7 +113,7 @@ const Home = () => {
                             fontSize={16} // Labels are clearly visible
                         />
                     </div>
-                    <p className="text-center text-gray-400 mt-8">
+                    <p className="text-center text-gray-400 mt-8 md:text-xl text-sm">
                         Data powered by{" "}
                         <a
                             href="https://github.com/vineet9310"

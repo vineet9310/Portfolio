@@ -36,7 +36,7 @@ function Contact() {
 
             const result = await response.json();
             if (response.ok) {
-                setFeedback('Query submitted successfully!');
+                setFeedback('Form submitted successfully!');
                 setFormData({
                     name: '',
                     email: '',

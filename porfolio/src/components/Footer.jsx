@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 function Footer() {
     const navigate = useNavigate();
     return (
-        <footer className="bg-gray-900 text-white py-12">
+        <footer className="bg-gray-900 text-white md:text-2xl text-sm py-12">
             <div className="container mx-auto px-6 md:px-12">
                 <div className="flex flex-col md:flex-row justify-between items-start">
                     {/* Left Section */}
