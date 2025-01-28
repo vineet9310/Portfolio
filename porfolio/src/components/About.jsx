@@ -17,7 +17,7 @@ function About() {
     return (
         <div className='max-w-screen-2xl container mx-auto px-4 md:px-20 my-16'>
             <h1 className="text-4xl font-bold mb-5 pt-5">About Me</h1>
-            <p className="text-lg mb-5">
+            <p className="text-l md:text-lg mb-5">
                 👋 Hi, I'm <strong>Vineet Beniwal</strong> – a creative problem-solver and full-stack developer with a passion for designing modern, scalable, and efficient software. My expertise spans technologies like <strong>React.js</strong>, <strong>Node.js</strong>, <strong>Express.js</strong>, <strong>MongoDB</strong>, and <strong>PostgreSQL</strong>, empowering me to create dynamic web applications tailored to user and business needs. From sleek frontends to robust backends, I bring innovative ideas to life.
             </p>
 

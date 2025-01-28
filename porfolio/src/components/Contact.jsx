@@ -54,8 +54,8 @@ function Contact() {
 
     return (
         <div className="max-w-screen-2xl container mx-auto px-4 md:px-20 mt-20 mb-10">
-            <h1 className="text-3xl font-bold mb-6">Feel free to contact</h1>
-            <p className="text-gray-700 mb-10">
+            <h1 className="text-xl md:text-3xl font-bold mb-6">Feel free to contact</h1>
+            <p className="text-gray-700 mb-10 text-sm md:text-xl">
                 If you have any questions, project inquiries, or suggestions, feel free to reach out. I'll be happy to assist!
             </p>
             <div className="bg-gray-100 p-8 rounded-lg shadow-md max-w-2xl mx-auto">

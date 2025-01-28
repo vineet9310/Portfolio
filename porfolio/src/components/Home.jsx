@@ -19,8 +19,8 @@ const Home = () => {
                 <div className="flex flex-col md:flex-row">
                     {/* Left Content */}
                     <div className="md:w-1/2 mt-12 md:mt-24 space-y-2 order-2 md:order-1">
-                        <span className="text-lg md:text-3xl">Welcome To My Feed</span>
-                        <div className="flex space-x-1 text-sm md:text-3xl">
+                        <span className="text-2xl md:text-3xl">Welcome To My Feed</span>
+                        <div className="flex space-x-1 text-xl md:text-3xl">
                             <h1>Hello, I'm a</h1>
                             <ReactTyped
                                 className="font-bold"
@@ -34,7 +34,7 @@ const Home = () => {
                                 loop={true}
                             />
                         </div>
-                        <p className="text-sm md:text-xl text-justify">
+                        <p className="text-l md:text-xl text-justify">
                             Transforming ideas into reality, I specialize in crafting seamless digital experiences through clean, efficient, and scalable code. As a
                             <span className="animated-text font-extrabold text-lg"> full-stack developer</span>,
                             I bring expertise in building responsive frontends and robust backends, ensuring functionality, performance, and user satisfaction. With a passion for problem-solving, I turn complex concepts into innovative, user-friendly solutions.
