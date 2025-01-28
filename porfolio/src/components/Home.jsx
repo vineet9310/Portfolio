@@ -13,6 +13,7 @@ import { ReactTyped } from "react-typed";
 import { FaGithub } from "react-icons/fa";
 
 const Home = () => {
+    
     return (
         <>
             <div className="main-content max-w-screen-2xl container mx-auto px-4 md:px-20 my-20">
@@ -103,17 +104,17 @@ const Home = () => {
                 <h2 className="text-lg md:text-4xl font-bold text-center  mt-8 mb-8 text-black-700">
                     My <span className="text-purple-600 text-lg md:text-4xl">GitHub</span> Contributions
                 </h2>
-                <div className="bg-gray-800 p-10 rounded-xl shadow-lg my-10 mx-auto max-w-8xl">
+                <div className="bg-gray-800 p-6 md:p-10 rounded-xl shadow-lg mx-auto max-w-4xl">
                     <div className="flex justify-center text-white">
                         <GitHubCalendar
                             username="vineet9310" // Replace with your GitHub username
-                            blockSize={18} // Increased block size for better visibility
-                            blockMargin={6} // Adjusted margin for better spacing
-                            color="#c084f5" // Purple theme for better contrast
-                            fontSize={16} // Labels are clearly visible
+                            blockSize={window.innerWidth < 640 ? 10 : 18} // Smaller block size for small screens
+                            blockMargin={window.innerWidth < 640 ? 4 : 6} // Adjusted margin for better spacing
+                            color="#c084f5" // Purple theme
+                            fontSize={window.innerWidth < 640 ? 12 : 16} // Smaller font size for labels
                         />
                     </div>
-                    <p className="text-center text-gray-400 mt-8 md:text-xl text-sm">
+                    <p className="text-center text-gray-400 mt-4 md:mt-8 text-sm md:text-xl">
                         Data powered by{" "}
                         <a
                             href="https://github.com/vineet9310"
