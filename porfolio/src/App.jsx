@@ -6,6 +6,7 @@ import About from './components/About';
 import Portfolio from './components/Portfolio';
 import Footer from './components/Footer';
 import Contact from './components/Contact';
+import Resume from './components/Resume';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/resume" element={<Resume />} />
           </Routes>
         </div>
         
@@ -38,7 +40,7 @@ export default App;
 /* Helper Component to Show Footer Conditionally */
 function FooterConditional() {
   const location = useLocation(); // Get current route
-  const showFooterRoutes = ["/", "/contact"]; // Define routes where footer should appear
+  const showFooterRoutes = ["/", "/contact", "/resume"]; // Define routes where footer should appear
 
   return showFooterRoutes.includes(location.pathname) ? <Footer /> : null;
 }

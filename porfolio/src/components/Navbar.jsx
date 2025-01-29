@@ -25,8 +25,8 @@ function Navbar() {
         },
         {
             id: 4,
-            text: "Experience",
-            path: "/experience",
+            text: "Resume",
+            path: "/resume",
         },
         {
             id: 5,
