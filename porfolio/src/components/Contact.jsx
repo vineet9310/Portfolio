@@ -53,15 +53,18 @@ function Contact() {
     };
 
     return (
-        <div className="max-w-screen-2xl container mx-auto px-4 md:px-20 mt-20 mb-10">
-            <h1 className="text-xl md:text-3xl font-bold mb-6">Feel free to contact</h1>
-            <p className="text-gray-700 mb-10 text-sm md:text-xl">
-                If you have any questions, project inquiries, or suggestions, feel free to reach out. I'll be happy to assist!
+        <div className="max-w-screen-xl mx-auto px-4 sm:px-8 lg:px-16 mt-20">
+            <h1 className="text-2xl sm:text-4xl font-extrabold text-center mb-4 text-gray-800">
+                Let's Get in Touch
+            </h1>
+            <p className="text-center text-sm sm:text-base text-gray-600 mb-8">
+                Have questions or project ideas? Fill out the form below, and I'll get back to you shortly.
             </p>
-            <div className="bg-gray-100 p-8 rounded-lg shadow-md max-w-2xl mx-auto">
+
+            <div className="bg-white shadow-lg rounded-lg p-6 sm:p-10 max-w-3xl mx-auto">
                 {feedback && (
                     <div
-                        className={`mb-6 p-4 rounded-md ${
+                        className={`mb-6 p-4 rounded-md text-center ${
                             feedback.includes('successfully')
                                 ? 'bg-green-100 text-green-700'
                                 : 'bg-red-100 text-red-700'
@@ -70,10 +73,10 @@ function Contact() {
                         {feedback}
                     </div>
                 )}
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit} className="space-y-4">
                     {/* Name */}
-                    <div className="mb-6">
-                        <label htmlFor="name" className="block text-lg font-medium text-gray-700">
+                    <div>
+                        <label htmlFor="name" className="block text-sm sm:text-base font-medium text-gray-700">
                             Full Name
                         </label>
                         <input
@@ -82,15 +85,15 @@ function Contact() {
                             name="name"
                             value={formData.name}
                             onChange={handleChange}
-                            placeholder="Enter your full name"
-                            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                            placeholder="Your Name"
+                            className="w-full mt-1 p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500"
                             required
                         />
                     </div>
 
                     {/* Email */}
-                    <div className="mb-6">
-                        <label htmlFor="email" className="block text-lg font-medium text-gray-700">
+                    <div>
+                        <label htmlFor="email" className="block text-sm sm:text-base font-medium text-gray-700">
                             Email Address
                         </label>
                         <input
@@ -99,15 +102,15 @@ function Contact() {
                             name="email"
                             value={formData.email}
                             onChange={handleChange}
-                            placeholder="Enter your email"
-                            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                            placeholder="Your Email"
+                            className="w-full mt-1 p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500"
                             required
                         />
                     </div>
 
-                    {/* Phone Number */}
-                    <div className="mb-6">
-                        <label htmlFor="phone" className="block text-lg font-medium text-gray-700">
+                    {/* Phone */}
+                    <div>
+                        <label htmlFor="phone" className="block text-sm sm:text-base font-medium text-gray-700">
                             Phone Number
                         </label>
                         <input
@@ -116,15 +119,15 @@ function Contact() {
                             name="phone"
                             value={formData.phone}
                             onChange={handleChange}
-                            placeholder="Enter your phone number"
-                            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                            placeholder="Your Phone Number"
+                            className="w-full mt-1 p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500"
                             required
                         />
                     </div>
 
                     {/* Subject */}
-                    <div className="mb-6">
-                        <label htmlFor="subject" className="block text-lg font-medium text-gray-700">
+                    <div>
+                        <label htmlFor="subject" className="block text-sm sm:text-base font-medium text-gray-700">
                             Subject
                         </label>
                         <select
@@ -132,7 +135,7 @@ function Contact() {
                             name="subject"
                             value={formData.subject}
                             onChange={handleChange}
-                            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                            className="w-full mt-1 p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500"
                             required
                         >
                             <option value="">Select a subject</option>
@@ -145,27 +148,27 @@ function Contact() {
                     </div>
 
                     {/* Message */}
-                    <div className="mb-6">
-                        <label htmlFor="message" className="block text-lg font-medium text-gray-700">
-                            Tell us about your project
+                    <div>
+                        <label htmlFor="message" className="block text-sm sm:text-base font-medium text-gray-700">
+                            Message
                         </label>
                         <textarea
                             id="message"
                             name="message"
                             value={formData.message}
                             onChange={handleChange}
-                            rows="5"
-                            placeholder="Describe your project, inquiry, or suggestion..."
-                            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                            rows="4"
+                            placeholder="Your Message"
+                            className="w-full mt-1 p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500"
                             required
                         ></textarea>
                     </div>
 
                     {/* Submit Button */}
-                    <div className="text-right">
+                    <div className="text-center">
                         <button
                             type="submit"
-                            className="bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg shadow-md transition duration-300"
+                            className="bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg shadow-md text-sm sm:text-base transition duration-300"
                         >
                             Submit
                         </button>
