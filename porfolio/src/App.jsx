@@ -12,12 +12,10 @@ function App() {
   return (
     <div className="flex flex-col min-h-screen">
       <Router>
-        {/* Fixed Navbar */}
+        <ScrollToTop /> {/* Local ScrollToTop definition */}
         <div className="sticky top-0 z-50">
           <Navbar />
         </div>
-        
-        {/* Main Content */}
         <div className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
@@ -27,8 +25,6 @@ function App() {
             <Route path="/resume" element={<Resume />} />
           </Routes>
         </div>
-        
-        {/* Conditionally Render Footer */}
         <FooterConditional />
       </Router>
     </div>
@@ -37,10 +33,20 @@ function App() {
 
 export default App;
 
-/* Helper Component to Show Footer Conditionally */
-function FooterConditional() {
-  const location = useLocation(); // Get current route
-  const showFooterRoutes = ["/", "/contact", "/resume"]; // Define routes where footer should appear
+/* Local ScrollToTop Component */
+function ScrollToTop() {
+  const { pathname } = useLocation();
 
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
+/* Helper Component to Conditionally Render Footer */
+function FooterConditional() {
+  const location = useLocation();
+  const showFooterRoutes = ["/", "/contact", "/resume"];
   return showFooterRoutes.includes(location.pathname) ? <Footer /> : null;
 }
