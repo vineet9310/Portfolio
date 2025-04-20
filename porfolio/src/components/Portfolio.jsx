@@ -7,6 +7,7 @@ import git from "../../public/git-scm-icon.svg";
 import java from "../../public/java-icon.svg";
 import expressJS from "../../public/expressjs-icon.svg";
 import MySql from "../../public/mysql-official.svg";
+import imageedit from "../../public/imageedit.svg";
 
 function Portfolio() {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -14,11 +15,11 @@ function Portfolio() {
   const cardItem = [
     {
       id: 1,
-      logo: mongoDB,
-      name: "MongoDB",
-      category: "Backend",
-      github: "https://github.com/your-repo/mongodb-project",
-      preview: "https://mongodb-project-demo.com",
+      logo: imageedit,  
+      name: "SnapEditify",
+      category: "Frontend",
+      github: "https://github.com/vineet9310/image-editor-react.git",
+      preview: "https://image-editor-react-rust.vercel.app/",
     },
     {
       id: 2,
