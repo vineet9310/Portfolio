@@ -29,6 +29,12 @@ const Home = () => {
                                     `<span style="color: red;">Developer</span>`,
                                     `<span style="color: purple;">Coder</span>`,
                                     `<span style="color: green;">Programmer</span>`,
+                                    `<span style="color: blue;">Designer</span>`,
+                                    `<span style="color: orange;">Creator</span>`,
+                                    `<span style="color: teal;">Innovator</span>`,
+                                    `<span style="color: pink;">Tech Enthusiast</span>`,
+                                    `<span style="color: yellow;">Problem Solver</span>`,
+                                    `<span style="color: brown;">Tech Explorer</span>`,
                                 ]}
                                 typeSpeed={40}
                                 backSpeed={50}
