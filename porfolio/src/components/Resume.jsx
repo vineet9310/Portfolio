@@ -57,13 +57,22 @@ function Resume() {
           <div>
             <h4 className="text-xl sm:text-2xl font-semibold text-gray-800">Experience</h4>
             <p className="text-sm sm:text-base text-gray-600 mt-2">
-              <strong>Software Developer | The Drone Destination Ltd</strong><br />
-              Apr 2023 - Present
+              <strong>Frontend Developer | The Drone Destination Limited</strong><br />
+              Apr 2023 - Apr 2025
             </p>
             <ul className="list-disc pl-4 sm:pl-6 text-sm sm:text-base text-gray-600 mt-2">
               <li>Developed and optimized responsive frontend components using HTML, CSS, JavaScript, React.js, and jQuery.</li>
               <li>Integrated third-party APIs to enhance backend capabilities.</li>
               <li>Maintained source control systems like Git and SVN for streamlined project collaboration.</li>
+            </ul>
+            <p className="text-sm sm:text-base text-gray-600 mt-2">
+              <strong>Website Developer | Astroveda Service Private Limited</strong><br />
+              Apr 2025 - Present
+            </p>
+            <ul className="list-disc pl-4 sm:pl-6 text-sm sm:text-base text-gray-600 mt-2">
+              <li>Contributed to the development and maintenance of Companies website, a live astrology consultation platform..</li>
+              <li>Implemented responsive UI components, integrated APIs, and optimized performance for both desktop and mobile users.</li>
+              <li>Collaborated on feature rollouts such as booking workflows, content sections, user authentication, and real-time chat functionality.</li>
             </ul>
           </div>
 
