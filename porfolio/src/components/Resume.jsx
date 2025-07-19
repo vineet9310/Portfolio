@@ -9,7 +9,7 @@ function Resume() {
           {/* Header Section */}
           <div className="text-center">
             <h3 className="text-2xl sm:text-3xl font-semibold text-gray-800">Vineet Kumar Beniwal</h3>
-            <p className="text-lg sm:text-xl text-gray-600">Software Developer</p>
+            <p className="text-lg sm:text-xl text-gray-600">Web Developer</p>
             <div className="mt-4">
               <p className="text-sm sm:text-base">
                 Email: <a href="mailto:vineetbeniwal9310@gmail.com" className="text-blue-600">vineetbeniwal9310@gmail.com</a>
