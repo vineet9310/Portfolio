@@ -70,7 +70,7 @@ function Resume() {
               Apr 2025 - Present
             </p>
             <ul className="list-disc pl-4 sm:pl-6 text-sm sm:text-base text-gray-600 mt-2">
-              <li>Contributed to the development and maintenance of Companies website, a live astrology consultation platform..</li>
+              <li>Contributed to the development and maintenance of Companies website, a live astrology consultation platform.</li>
               <li>Implemented responsive UI components, integrated APIs, and optimized performance for both desktop and mobile users.</li>
               <li>Collaborated on feature rollouts such as booking workflows, content sections, user authentication, and real-time chat functionality.</li>
             </ul>
@@ -98,7 +98,7 @@ function Resume() {
               <li><strong>Programming Languages:</strong> HTML, CSS, JavaScript, Node.js, Java, Python</li>
               <li><strong>Libraries/Frameworks:</strong> React.js, Express.js, Axios, Mongoose</li>
               <li><strong>Databases:</strong> MySQL, PostgreSQL, MongoDB</li>
-              <li><strong>Tools & Platforms:</strong> Git, Visual Studio Code, npm</li>
+              <li><strong>Tools & Platforms:</strong> Git, Visual Studio Code, npm, Firebase Studio, Shopify</li>
             </ul>
           </div>
 
@@ -111,6 +111,9 @@ function Resume() {
               <li>Frontend Development: Responsive web design, user interface optimization.</li>
               <li>Backend Development: API integration, database schema design.</li>
               <li>Data Analytics: Proficient in big data tools and processes for actionable insights.</li>
+              <li>Version Control: Experienced with Git for collaborative development.</li>
+              <li>Problem Solving: Strong analytical skills with a focus on clean, maintainable code.</li>
+              <li>Skilled in designing and developing custom e-commerce stores on the Shopify platform.</li>
             </ul>
           </div>
 
