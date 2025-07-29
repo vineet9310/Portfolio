@@ -1,11 +1,73 @@
-import React from 'react';
-import ResumePDF from '../assets/Vineet_Kumar_Beniwal_Resume.pdf';
+import React, { useRef, useState } from 'react';
+import jsPDF from 'jspdf';
+import html2canvas from 'html2canvas';
 
 function Resume() {
+  // Create a ref to attach to the DOM element we want to capture
+  const resumeRef = useRef();
+  const [loading, setLoading] = useState(false);
+
+  // Function to handle the PDF download
+  const handleDownloadPdf = () => {
+    const input = resumeRef.current;
+    if (!input) {
+      console.error("Resume element not found!");
+      return;
+    }
+
+    setLoading(true); // Start loading indicator
+
+    // Use html2canvas to capture the element
+    html2canvas(input, {
+      scale: 2, // Increase scale for better resolution
+      useCORS: true, 
+    }).then((canvas) => {
+      // Get image data from the canvas
+      const imgData = canvas.toDataURL('image/png');
+      
+      // Create a new PDF instance (A4 size)
+      const pdf = new jsPDF('p', 'mm', 'a4');
+      
+      const pdfWidth = pdf.internal.pageSize.getWidth();
+      const pdfHeight = pdf.internal.pageSize.getHeight();
+      
+      const canvasWidth = canvas.width;
+      const canvasHeight = canvas.height;
+      
+      // Calculate the aspect ratio to fit the image in the PDF
+      const ratio = canvasWidth / canvasHeight;
+      const imgWidth = pdfWidth;
+      const imgHeight = imgWidth / ratio;
+
+      let heightLeft = imgHeight;
+      let position = 0;
+
+      // Add the first page
+      pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+      heightLeft -= pdfHeight;
+
+      // Add new pages if the content is longer than one page
+      while (heightLeft > 0) {
+        position = heightLeft - imgHeight;
+        pdf.addPage();
+        pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+        heightLeft -= pdfHeight;
+      }
+      
+      // Save the generated PDF
+      pdf.save('Vineet_Kumar_Beniwal_Resume.pdf');
+      setLoading(false); // Stop loading indicator
+    }).catch(err => {
+        console.error("Error generating PDF:", err);
+        setLoading(false);
+    });
+  };
+
   return (
     <section className="bg-gray-900 py-12">
       <div className="container mx-auto px-4 sm:px-6 md:px-12 lg:px-24">
-        <div className="bg-purple-100 shadow-md rounded-lg mt-6 sm:mt-10 p-4 sm:p-6 md:p-10">
+        {/* The ref is attached to this div, so everything inside it will be captured */}
+        <div ref={resumeRef} className="bg-purple-100 shadow-md rounded-lg mt-6 sm:mt-10 p-4 sm:p-6 md:p-10">
           {/* Header Section */}
           <div className="text-center">
             <h3 className="text-2xl sm:text-3xl font-semibold text-gray-800">Vineet Kumar Beniwal</h3>
@@ -19,7 +81,7 @@ function Resume() {
               </p>
               <p className="text-sm sm:text-base">Location: New Delhi</p>
               <p className="text-sm sm:text-base">
-                Website: <a href="https://vineetbeniwal.in" className="text-blue-600">vineetbeniwal.in</a>
+                Portfolio: <a href="https://vineetbeniwal.in" className="text-blue-600">vineetbeniwal.in</a>
               </p>
             </div>
           </div>
@@ -116,19 +178,17 @@ function Resume() {
               <li>Skilled in designing and developing custom e-commerce stores on the Shopify platform.</li>
             </ul>
           </div>
-
-          <hr className="my-4 sm:my-6 border-gray-400" />
-
-          {/* Download Button */}
-          <div className="text-center">
-            <a
-              href={ResumePDF} // Reference the imported PDF
-              download="Vineet_Kumar_Beniwal_Resume.pdf"
-              className="bg-blue-600 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-md font-semibold text-sm sm:text-lg hover:bg-blue-700 transition"
+        </div>
+        
+        {/* Download Button - now a button that triggers the PDF generation */}
+        <div className="text-center mt-8">
+            <button
+              onClick={handleDownloadPdf}
+              disabled={loading}
+              className="bg-blue-600 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-md font-semibold text-sm sm:text-lg hover:bg-blue-700 transition disabled:bg-gray-500 disabled:cursor-not-allowed"
             >
-              Download Resume
-            </a>
-          </div>
+              {loading ? 'Downloading...' : 'Download Resume'}
+            </button>
         </div>
       </div>
     </section>
