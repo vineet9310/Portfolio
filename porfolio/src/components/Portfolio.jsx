@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import python from "../../public/python-icon.svg";
+import resume from "../../public/resume.svg";
 import react from "../../public/reactjs-icon.svg";
 import node from "../../public/nodejs-icon.svg";
 import mongoDB from "../../public/mongodb-icon.svg";
@@ -23,11 +23,11 @@ function Portfolio() {
     },
     {
       id: 2,
-      logo: python,
-      name: "Python",
-      category: "Programming",
-      github: "https://github.com/your-repo/python-project",
-      preview: "https://python-project-demo.com",
+      logo: resume,
+      name: "Resume Architect",
+      category: "Frontend",
+      github: "https://github.com/vineet9310/Resume-Architect.git",
+      preview: "https://resume-architect-nine.vercel.app/",
     },
     // {
     //   id: 3,
